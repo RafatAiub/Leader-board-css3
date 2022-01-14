@@ -105,6 +105,7 @@ hr{
 }
 .fa-star.marked{
     color: rgba(224, 161, 26, 0.822);
+    font-size: 20px;
 }
 .fa-star.unmarked{
     color: rgb(94, 103, 107);
