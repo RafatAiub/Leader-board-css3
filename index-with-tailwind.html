@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leader Board</title>
-    <script src="https://kit.fontawesome.com/c4d3f44d66.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Leader_board tailwindcss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    .players img {
+        width: 25%;
+    }
+</style>
 
 <body>
     <header>
@@ -17,44 +21,38 @@
 
     <main>
         <!-- top player & top blocks -->
-        <section class="container">
-            <div class="top-players">
-                <h2 id="top-players" class="section-titlew">Top Players</h2>
-                <script>
-                    document.getElementById('top-players').style.color = 'red';
-                </script>
-                <div class="players">
-                    <div class="player">
+        <section class="container ">
+            <div class="top-players text-blue-900 w-3/4 justify-center">
+                <h2 class="section-title">Top Players</h2>
+                <div class="players flex">
+                    <div class="player flex">
                         <img src="images/players/player-1.png" alt="">
                         <h3 class="player-name" class="player-name">player-1</h3>
                     </div>
-                    <div class="player">
+                    <div class="player flex">
                         <img src="images/players/player-2.png" alt="">
                         <h3 class="player-name" class="player-name">player-2</h3>
                     </div>
-                    <div class="player">
+                    <div class="player flex">
                         <img src="images/players/player-3.png" alt="">
                         <h3 class="player-name">player-3</h3>
                     </div>
-                    <div class="player">
+                    <div class="player flex">
                         <img src="images/players/player-4.png" alt="">
                         <h3 class="player-name">player-4</h3>
                     </div>
-                    <div class="player">
+                    <div class="player flex">
                         <img src="images/players/player-5.png" alt="">
                         <h3 class="player-name">player-5</h3>
                     </div>
-                    <div class="player">
+                    <div class="player flex">
                         <img src="images/players/player-6.png" alt="">
                         <h3 class="player-name">player-6</h3>
                     </div>
                 </div>
             </div>
             <hr>
-            <div id="titles" class="top-blogs">
-                <script>
-                    document.getElementById('titles').style.color = 'rgba(77, 149, 152, 0.9)';
-                </script>
+            <div class="top-blogs">
                 <h2 class="section-title"> Top Blog</h2>
                 <div class="blogs">
                     <article class="blog">
@@ -163,34 +161,6 @@
             </div>
         </section>
     </main>
-    <h1>Tutors point owners</h1>
-    <ul>
-        <li>Fazlul Korim</li>
-        <li>Nazia Farhana</li>
-        <li>Tanvir Mahtab Rafat</li>
-        <li>Azmain Mahtab</li>
-        <li id="new"></li>
-    </ul>
-    <input type="text" id="input" style="margin-left: 20px;">
-    <button onclick="Added(),document.getElementById('input').value=''" id="button" onfocus="this.value=''"
-        style="border: 2px; font: inherit;  margin-left: 20px; background-color: cornflowerblue; border-radius: 10px; padding: 10px;">Added</button>
-
-    <script>
-        let i = 1;
-        function Added() {
-            let owner = document.getElementById('input').value;
-            let li = document.createElement('li');
-            li.textContent = owner + '.';
-            document.getElementById('new').appendChild(li);
-            owner.value = '';
-            i++;
-            console.log(i);
-            if (i == 5) {
-                document.getElementById('button').disabled = true;
-            }
-        };
-
-    </script>
 
 </body>
 
